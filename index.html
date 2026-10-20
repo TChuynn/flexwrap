@@ -4,294 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Development Template</title>
-    <style>
-        /* Universal reset selector */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Thanh điều hướng (Navbar) */
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            padding: 10px 20px;
-            z-index: 1000;
-        }
-
-        .background {
-            background-color: #1a1a1a;
-            background-blend-mode: darken;
-            background-size: cover;
-        }
-
-        .nav-list {
-            width: 70%;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 20px;
-        }
-
-        .logo img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .nav-list li {
-            list-style: none;
-            padding: 15px 20px;
-        }
-
-        .nav-list li a {
-            text-decoration: none;
-            color: white;
-            font-family: sans-serif;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-list li a:hover {
-            color: grey;
-        }
-
-        /* Khung tìm kiếm bên phải Navbar */
-        .rightNav {
-            width: 30%;
-            text-align: right;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 10px;
-        }
-
-        #search {
-            padding: 6px 10px;
-            font-size: 15px;
-            border: 2px solid grey;
-            border-radius: 9px;
-            outline: none;
-        }
-
-        /* Nút bấm */
-        .btn {
-            padding: 8px 20px;
-            border: 2px solid white;
-            border-radius: 8px;
-            background: none;
-            color: white;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: white;
-            color: black;
-        }
-
-        .btn-sm {
-            padding: 6px 12px;
-            vertical-align: middle;
-        }
-
-        /* Các Section giao diện chính */
-        .firstsection {
-            background-color: #2e7d32;
-            /* Màu xanh lá đậm hiện đại hơn */
-            color: white;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-        }
-
-        .secondsection {
-            background-color: #1565c0;
-            /* Màu xanh dương đậm */
-            color: white;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-        }
-
-        .box-main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 80%;
-            margin: auto;
-            padding: 40px 0;
-        }
-
-        .firstHalf {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .secondHalf {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .text-big {
-            font-family: 'Piazzolla', serif, 'Times New Roman';
-            font-weight: bold;
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .text-small {
-            font-family: sans-serif;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        /* Section thứ 3 sử dụng Flexbox căn chỉnh ảnh & chữ */
-        .section {
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 90%;
-            margin: auto;
-            padding: 40px 0;
-        }
-
-        /* Sử dụng row-reverse để đảo vị trí Hình ảnh và Văn bản */
-        .section-Left {
-            flex-direction: row-reverse;
-        }
-
-        .paras {
-            padding: 0 40px;
-            flex: 1;
-        }
-
-        .thumbnail img {
-            width: 280px;
-            height: auto;
-            border: 2px solid black;
-            border-radius: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a1a1a;
-        }
-
-        .text-footer {
-            text-align: center;
-            padding: 25px 0;
-            font-family: 'Ubuntu', sans-serif;
-            display: flex;
-            justify-content: center;
-            color: white;
-            font-size: 15px;
-        }
-    </style>
+    <title>Creative Web Design - Advanced Template</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Thanh điều hướng Navbar -->
-    <nav class="navbar background">
-        <ul class="nav-list">
-            <div class="logo">
-                <img src="https://picsum.photos/100" alt="Logo">
-            </div>
-            <li><a href="#web">Web Technology</a></li>
-            <li><a href="#program">C Programming</a></li>
-            <li><a href="#java">Java</a></li>
-        </ul>
-
-        <div class="rightNav">
-            <input type="text" name="search" id="search" placeholder="Search...">
-            <button class="btn btn-sm">Search</button>
+    <!-- Header với nền ảnh và hiệu ứng blur -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Creative Web Design</h1>
+            <p>Thiết kế website chuyên nghiệp - Hiện đại - Ấn tượng</p>
+            <a href="#services" class="btn">Khám phá ngay</a>
         </div>
+    </header>
+
+    <!-- Thanh điều hướng cố định -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
     </nav>
 
-    <!-- Phần 1: Web Technology -->
-    <section class="firstsection">
-        <div class="box-main">
-            <div class="firstHalf">
-                <h1 class="text-big" id="web">
-                    Web Technology
-                </h1>
-                <p class="text-small">
-                    HTML stands for HyperText Markup Language. It is used to design
-                    web pages using a markup language. HTML is the combination of Hypertext
-                    and Markup language. Hypertext defines the link between the web
-                    pages. A markup language is used to define the text document within
-                    tag which defines the structure of web pages. HTML is a markup language
-                    that is used by the browser to manipulate text, images, and other
-                    content to display it in the required format.
+    <!-- Content Section với Card Layout (CSS Grid) -->
+    <section class="content" id="services">
+        <h2>Dịch vụ của chúng tôi</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://picsum.photos/id/1/600/400" alt="Thiết kế Website">
+                <h3>Thiết kế Website</h3>
+                <p>Chúng tôi tạo ra những trang web chuyên nghiệp, tối ưu chuẩn SEO và thân thiện với người dùng.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/160/600/400" alt="SEO & Marketing">
+                <h3>SEO & Marketing</h3>
+                <p>Giúp website của bạn đạt thứ hạng cao trên công cụ tìm kiếm và tiếp cận nhiều khách hàng tiềm năng.
                 </p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/180/600/400" alt="Hỗ trợ 24/7">
+                <h3>Hỗ trợ 24/7</h3>
+                <p>Đội ngũ hỗ trợ kỹ thuật luôn sẵn sàng đồng hành và giải quyết mọi vấn đề của bạn mọi lúc.</p>
             </div>
         </div>
     </section>
 
-    <!-- Phần 2: C Programming -->
-    <section class="secondsection">
-        <div class="box-main">
-            <div class="secondHalf">
-                <h1 class="text-big" id="program">
-                    C Programming
-                </h1>
-                <p class="text-small">
-                    C is a procedural programming language. It was initially developed by Dennis
-                    Ritchie as a system programming language to write operating system.
-                    The main features of C language include low-level access to memory, simple set
-                    of keywords, and clean style, these features make C language suitable for
-                    system programming like operating system or compiler development.
-                </p>
-            </div>
+    <!-- Footer chuyên nghiệp 2 cột có định dạng phân cấp bằng dấu chấm (•) -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p>&copy; 2026 Creative Web. All rights reserved.</p>
         </div>
-    </section>
-
-    <!-- Phần 3: Java (Ví dụ về Flexbox với section-Left đảo vế) -->
-    <section class="section section-Left" id="java">
-        <div class="paras">
-            <h1 class="sectionTag text-big">Java</h1>
-            <p class="sectionSubTag text-small">
-                Java has been one of the most popular programming language for many years.
-                Java is Object Oriented. However it is not considered as pure object oriented
-                as it provides support for primitive data types (like int, char, etc). The
-                Java codes are first compiled into byte code (machine independent code). Then
-                the byte code is run on Java Virtual Machine (JVM) regardless of the
-                underlying architecture.
+        <div class="footer-right">
+            <p>
+                Theo dõi chúng tôi:
+                <a href="#">Facebook</a> •
+                <a href="#">Twitter</a> •
+                <a href="#">LinkedIn</a>
             </p>
         </div>
-
-        <div class="thumbnail">
-            <img src="https://picsum.photos/300/200" alt="Laptop Image">
-        </div>
-    </section>
-
-    <!-- Chân trang Footer -->
-    <footer class="background">
-        <p class="text-footer">
-            Copyright © 2026 - All rights are reserved
-        </p>
     </footer>
 
 </body>
