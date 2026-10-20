@@ -4,94 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới Thiệu Công Ty</title>
-    <!-- Bước 1: Nhúng CSS Bootstrap 5 từ CDN -->
+    <title>Trang Web Responsive Bootstrap 5</title>
+    <!-- 1. Nhúng CSS Bootstrap 5 qua CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
-<body>
+<body class="bg-light">
 
-    <!-- Bước 2.2: Tạo Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- 1. HEADER: Chứa tiêu đề trang web -->
+    <header class="bg-primary text-white text-center py-4">
         <div class="container">
-            <a class="navbar-brand" href="#">Doanh Nghiệp</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <h1 class="fw-bold m-0">Website Học Tập Bootstrap 5</h1>
+            <p class="lead m-0 mt-1">Xây dựng giao diện Responsive chuyên nghiệp</p>
+        </div>
+    </header>
+
+    <!-- 2. NAVBAR: Menu điều hướng có Dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">MyLogo</a>
+
+            <!-- Nút Toggle cho màn hình nhỏ (Mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Trang Chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Về Chúng Tôi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Dịch Vụ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Liên Hệ</a></li>
+
+            <!-- Menu nội dung -->
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Giới thiệu</a>
+                    </li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Khóa học
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Lập trình Web Frontend</a></li>
+                            <li><a class="dropdown-item" href="#">Lập trình Web Backend</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Thiết kế Chuyên nghiệp UI/UX</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Liên hệ</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Bước 2.3: Thêm Hero Section -->
-    <header class="bg-primary text-white text-center py-5">
-        <div class="container py-4">
-            <h1 class="display-4 fw-bold">Chào mừng đến với Công Ty Chúng Tôi</h1>
-            <p class="lead">Chúng tôi cung cấp các giải pháp chuyên nghiệp cho doanh nghiệp của bạn</p>
-            <a href="#services" class="btn btn-light btn-lg mt-3">Tìm Hiểu Ngay</a>
-        </div>
-    </header>
-
-    <!-- Bước 2.4: Tạo About Section -->
-    <section id="about" class="container py-5">
-        <h2 class="text-center mb-4">Về Chúng Tôi</h2>
-        <p class="text-center lead">Công ty chúng tôi chuyên cung cấp các dịch vụ công nghệ, thiết kế website và tiếp
-            thị kỹ thuật số.</p>
-    </section>
-
-    <!-- Bước 2.5: Thêm Services Section -->
-    <section id="services" class="container py-5">
-        <h2 class="text-center mb-4">Dịch vụ của chúng tôi</h2>
+    <!-- CONTAINER CHÍNH CHỨA MAIN CONTENT VÀ SIDEBAR -->
+    <div class="container my-4">
+        <!-- Grid System: Chia cột theo điểm gãy lg (≥992px) -->
         <div class="row g-4">
-            <div class="col-md-4 text-center">
-                <div class="card h-100 p-3 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title h4">Thiết kế Website</h3>
-                        <p class="card-text">Thiết kế giao diện chuyên nghiệp và tối ưu hóa trải nghiệm người dùng.</p>
+
+            <!-- 3. MAIN CONTENT: col-12 trên mobile, col-lg-8 trên màn hình lớn (≥992px) -->
+            <main class="col-12 col-lg-8">
+                <article class="card shadow-sm p-4 mb-4">
+                    <h2 class="card-title h3 fw-bold text-primary mb-3">Nội Dung Chính</h2>
+                    <p class="card-text">
+                        Chào mừng bạn đến với bài tập thiết kế layout website sử dụng Bootstrap 5. Trong bài tập này,
+                        chúng ta sử dụng hệ thống Bootstrap Grid để quản lý khả năng hiển thị linh hoạt trên nhiều thiết
+                        bị.
+                    </p>
+                    <p class="card-text">
+                        Giao diện này áp dụng điểm gãy (breakpoint) ở mức <code>lg</code> (≥992px). Khi xem trên máy
+                        tính bàn hoặc laptop lớn, nội dung chính và thanh bên (Sidebar) sẽ hiển thị song song theo tỷ lệ
+                        8:4 (Main Content chiếm 8/12 phần, Sidebar chiếm 4/12 phần).
+                    </p>
+                </article>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 p-3 shadow-sm">
+                            <h4 class="h5 fw-bold">Grid System</h4>
+                            <p class="m-0">Hệ thống 12 cột linh hoạt giúp bố trí phần tử chuẩn xác theo mọi độ phân
+                                giải.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 p-3 shadow-sm">
+                            <h4 class="h5 fw-bold">Responsive First</h4>
+                            <p class="m-0">Tự động co giãn mượt mà từ màn hình thiết bị di động nhỏ đến máy tính màn
+                                hình rộng.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="card h-100 p-3 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title h4">Marketing Online</h3>
-                        <p class="card-text">Giải pháp tiếp thị số giúp doanh nghiệp của bạn phát triển.</p>
-                    </div>
+            </main>
+
+            <!-- 4. SIDEBAR: col-12 trên mobile, col-lg-4 trên màn hình lớn (≥992px) -->
+            <aside class="col-12 col-lg-4">
+                <div class="card shadow-sm p-3 mb-4">
+                    <h3 class="h5 fw-bold text-secondary border-bottom pb-2">Thông Tin Phụ (Sidebar)</h3>
+                    <p>Sidebar hiển thị danh mục bài viết, quảng cáo hoặc liên kết hữu ích khác.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent">📌 Tin tức mới nhất</li>
+                        <li class="list-group-item bg-transparent">📌 Hướng dẫn Bootstrap 5</li>
+                        <li class="list-group-item bg-transparent">📌 Tài nguyên lập trình</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="card h-100 p-3 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title h4">Hỗ trợ khách hàng</h3>
-                        <p class="card-text">Chúng tôi cam kết hỗ trợ khách hàng 24/7.</p>
+
+                <div class="card bg-primary text-white p-3 shadow-sm">
+                    <h4 class="h5 fw-bold">Đăng Ký Nhận Tin</h4>
+                    <p class="small">Nhận các bài viết và hướng dẫn mới nhất qua email của bạn.</p>
+                    <div class="mb-2">
+                        <input type="email" class="form-control" placeholder="Nhập email...">
                     </div>
+                    <button class="btn btn-dark w-100">Gửi ngay</button>
                 </div>
-            </div>
+            </aside>
+
         </div>
-    </section>
+    </div>
 
-    <!-- Bước 2.6: Thêm Contact Section -->
-    <section id="contact" class="container py-5 text-center">
-        <h2 class="mb-4">Liên hệ với chúng tôi</h2>
-        <p class="mb-1"><strong>Email:</strong> contact@company.com</p>
-        <p><strong>Hotline:</strong> 0988 123 456</p>
-    </section>
-
-    <!-- Bước 2.7: Tạo Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+    <!-- 5. FOOTER: Chứa thông tin bản quyền -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
         <div class="container">
-            <p class="mb-0">&copy; 2024 Công Ty Chúng Tôi. All rights reserved.</p>
+            <p class="m-0">&copy; 2026 Website Học Tập Bootstrap. Tất cả quyền được bảo lưu.</p>
         </div>
     </footer>
 
-    <!-- Bước 1: Nhúng JS Bootstrap 5 từ CDN -->
+    <!-- Nhúng JS Bootstrap 5 từ CDN (Bắt buộc cho Toggler & Dropdown) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
